@@ -8,7 +8,98 @@
 </head>
 <body>
 
+    <div id="container">
+        <div id="depense">
+            <div id="titreDepenses">
+                <h1>Calcule des dépenses</h1>
+            </div>
+            <div class="column">
+                <div id="fixe">
+                    <p class="titre">Dépenses fixes</p>
 
+                    <p class="nom">loyer et charges <span class="nbr">600</span><span class="euro">€</span></p>
+                    <p class="nom">remboursement de crédits <span class="nbr">348</span><span class="euro">€</span></p>
+                    <p class="nom">eau/électricité/gaz <span class="nbr">124</span><span class="euro">€</span></p>
+                    <p class="nom">téléphone - internet <span class="nbr">99</span><span class="euro">€</span></p>
+                    <p class="nom">assurance habitation <span class="nbr">230</span><span class="euro">€</span></p>
+                    <p class="nom">assurance véhicules <span class="nbr">147</span><span class="euro">€</span></p>
+                    <p class="nom">mutuelle santé <span class="nbr">50</span><span class="euro">€</span></p>
+                    <p class="nom">impôts sur le revenu <span class="nbr">111</span><span class="euro">€</span></p>
+
+                    <input type="text" id="addFixe" placeholder="Nom de la depenses">
+                    <input type="text" id="nbrFixe" placeholder="???€">
+                    <button class="add" id="bFixe">Add</button>
+                </div>
+                <div id="courante">
+                    <p class="titre">Dépenses courantes</p>
+
+                    <p class="nom">courses <span class="nbr">32</span><span class="euro">€</span></p>
+                    <p class="nom">frais de transport <span class="nbr">12</span><span class="euro">€</span></p>
+
+                    <input type="text" id="addCourante" placeholder="Nom de la depenses">
+                    <input type="text" id="nbrCourante" placeholder="???€">
+                    <button class="add" id="bCourante">Add</button>
+                </div>
+                <div id="occasionnel">
+                    <p class="titre">Dépenses occasionnelles</p>
+
+                    <p class="nom">sortie <span class="nbr">24</span><span class="euro">€</span></p>
+
+                    <input type="text" id="addOccas" placeholder="Nom de la depenses">
+                    <input type="text" id="nbrOccas" placeholder="???€">
+                    <button class="add" id="bOccas">Add</button>
+                </div>
+                <div id="autre">
+                    <p class="titre">Autres dépenses</p>
+
+                    <input type="text" id="addAutre" placeholder="Nom de la depenses">
+                    <input type="text" id="nbrAutre" placeholder="???€">
+                    <button class="add" id="bAutre">Add</button>
+                </div>
+            </div>
+        </div>
+        <div id="recette">
+            <div id="titreRecettes">
+                <h1>Calcule des recettes</h1>
+            </div>
+            <div class="column">
+                <div>
+                <p class="nom">Salaire <span class="nbr">5890</span><span class="euro">€</span></p>
+                <p class="nom">Aides <span class="nbr">456</span><span class="euro">€</span></p>
+                <p class="nom">Rentes <span class="nbr">3247</span><span class="euro">€</span></p>
+                <p class="nom">Autres <span class="nbr">7845</span><span class="euro">€</span></p>
+
+                <input type="text" id="addRecette" placeholder="Nom de la recette">
+                <input type="text" id="nbrRecette" placeholder="???€">
+                <button class="add" id="bRecette">Add</button>
+                </div>
+            </div>
+        </div>
+        <div id="epargne">
+            <div id="titreEpargne">
+                <h1>Calcule de l'éparge</h1>
+            </div>
+            <div class="column">
+                <div>
+                    <input type="text">
+                    <button>Add</button>
+                </div>
+            </div>
+        </div>
+        <div id="resultat">
+            <div id="phrase">
+                <h1>Résultat</h1>
+            </div>
+            <span>il vous reste: </span><span id="total"></span><span> €</span>
+            <p>Votre budget est: </p><span id="budget"></span>
+            <div id="liste">
+                <p class="titre">Vous pouvez acheter</p>
+                <ul id="ul">
+
+                </ul>
+            </div>
+        </div>
+    </div>
 
 <script src="script.js"></script>
 </body>
