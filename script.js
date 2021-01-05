@@ -3,8 +3,12 @@ let moins = document.getElementsByClassName("moins");
 let result = 0;
 
 setInterval(()=> {
-    for (let i of plus) result += parseInt(i.value);
-    for (let i of moins) result -= parseInt(i.value);
+    for (let i of plus) {
+        if (i.value !== "") result += parseFloat(i.value);
+    }
+    for (let i of moins) {
+        if (i.value !== "") result -= parseFloat(i.value);
+    }
     document.getElementById("total").innerHTML = result;
 
     if (result > 0) document.getElementById("budget").innerHTML = "Positif";
@@ -89,4 +93,9 @@ document.getElementById("bRecette").addEventListener("click", ()=>{
 
     name.value = "";
     nbr.value = "";
+});
+
+document.getElementById("reset").addEventListener("click", ()=>{
+   let input = document.getElementsByTagName("input");
+   for (let i of input) i.value = "";
 });
